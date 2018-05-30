@@ -1,0 +1,31 @@
+Spusteni: 
+
+./ipk-mtrip reflect -p port 
+
+    port - číslo portu, na kterém bude reflektor spuštěn.
+
+
+
+Cas musi byt ve vterinach. 
+Velikost sondy v bytech.
+
+
+./ipk-mtrip meter -h vzdáleny_host -p vzdálený_port - s velikost_sondy -t doba_mereni
+
+    vzdáleny_host - doménové jméno nebo IP adresa stanice, na které je reflektor spuštěn.
+
+    vzdálený_port - číslo portu, na kterém je reflektor spuštěn.
+    velikost_sondy - velikost dat použitých v "probe" paketu
+    doba_mereni - celový čas měření  
+
+
+Program musi byt spusten na dvou zdrojich. 
+Na jednom "reflect", na druhem "meter" se zadanymi parametry. Provede mereni, a na vystup "meter" vypise tyto hodnoty: 
+    
+	průměrná přenosová rychlost
+	maximální naměřená rychlost
+   	minimální naměřená rychlost 
+   	standardní odchylka 
+  	průměrný RTT paketů komunikace 
+
+Na strane "reflect" nebude vypsano nic. 
